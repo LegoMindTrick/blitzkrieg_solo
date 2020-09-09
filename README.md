@@ -1,6 +1,6 @@
 # blitzkrieg_solo
 
-A Clojure library designed to ... well, that part is up to you.
+A Clojure program designed to play Blitzkrieg: World War Two in 20 minutes by Paolo Mori.
 
 ## Usage
 
