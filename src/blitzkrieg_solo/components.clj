@@ -83,6 +83,27 @@
                                  }
                    }
   )
+
+(def research-pile [
+                    (:four-ship unit-catalog)
+                    (:four-ship unit-catalog)
+                    (:task-ship unit-catalog)
+                    (:bomb-ship unit-catalog)
+                    (:blitz-ship unit-catalog)
+                    (:nuke unit-catalog)
+                    (:blitz-tank unit-catalog)
+                    (:four-tank unit-catalog)
+                    (:four-tank unit-catalog)
+                    (:task-tank unit-catalog)
+                    (:bomb-plane unit-catalog)
+                    (:three-plane unit-catalog)
+                    (:three-plane unit-catalog)
+                    (:task-plane unit-catalog)
+                    (:spy unit-catalog)
+                    (:scientist unit-catalog)
+                    ]
+  )
+
 (def starting-bag [
                    (:admiral unit-catalog)
                    (:general unit-catalog)
@@ -108,10 +129,12 @@
                    (:three-ship unit-catalog)
                    ]
   )
+
 (def base-game-starting-state {:axis-score   0
                                :allies-score 0
-                               :axis-bag     (into-array [] (starting-bag))
-                               :allies-bag   (into-array [] (starting-bag))
+                               :axis-bag     (starting-bag)
+                               :allies-bag   (starting-bag)
+                               :research-pile (research-pile)
                                :theaters     [
                                               {:name          :pacific-ocean
                                                :pretty-name   "Pacific Ocean"
@@ -329,4 +352,5 @@
                                                               ]
                                                }
                                               ]
-                               })
+                               }
+  )
