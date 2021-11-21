@@ -86,17 +86,7 @@
 (def base-game-starting-state {:axis-score   0
                                :allies-score 0
                                :axis-bag     [
-                                              {:value   1
-                                               :terrain [:land]
-                                               :faction :axis
-                                               }
-                                              {:value   0
-                                               :terrain [:sea :land]
-                                               :faction :axis
-                                               :effect  [:blitz]
-                                               }
-                                              {:value 3
-                                               :terrain}
+
                                               ]
                                :theaters     [
                                               {:name          :pacific-ocean
