@@ -130,227 +130,231 @@
                    ]
   )
 
-(def base-game-starting-state {:axis-score   0
-                               :allies-score 0
-                               :axis-bag     (starting-bag)
-                               :allies-bag   (starting-bag)
-                               :research-pile (research-pile)
-                               :theaters     [
-                                              {:name          :pacific-ocean
-                                               :pretty-name   "Pacific Ocean"
-                                               :closed        false
-                                               :max-score     14
-                                               :min-score     -14
-                                               :current-score 0
-                                               :vp-locations  [-10 -5 5 10]
-                                               :campaigns     [
-                                                               {:vp            2
-                                                                :battle-spaces [
-                                                                                {:effect  [:bomb]
-                                                                                 :terrain [:sea]
-                                                                                 }
-                                                                                {:effect  [:research]
-                                                                                 :terrain [:sea]
-                                                                                 }
-                                                                                ]
-                                                                }
-                                                               {:vp            3
-                                                                :battle-spaces [
-                                                                                {:effect  [:research :research]
-                                                                                 :terrain [:sea]
-                                                                                 }
-                                                                                {:effect  [:factory]
-                                                                                 :terrain [:sea]
-                                                                                 }
-                                                                                {:effect  [:strategy :strategy]
-                                                                                 :terrain [:sea]
-                                                                                 }
-                                                                                {:terrain [:sea :land]}
-                                                                                ]
-                                                                }
-                                                               {:vp            5
-                                                                :battle-spaces [
-                                                                                {:effect  [:bomb]
-                                                                                 :terrain [:sea]
-                                                                                 }
-                                                                                {:effect  [:vp :vp]
-                                                                                 :terrain [:sea :land]
-                                                                                 }
-                                                                                {:terrain [:sea :land]
-                                                                                 }
-                                                                                ]
-                                                                }
-                                                               ]
-                                               }
-                                              {:name          :western-europe
-                                               :pretty-name   "Western Europe"
-                                               :closed        false
-                                               :max-score     14
-                                               :min-score     -14
-                                               :current-score 0
-                                               :vp-locations  [-10 -5 5 10]
-                                               :campaigns     [
-                                                               {:vp            2
-                                                                :battle-spaces [
-                                                                                {:effect  [:factory]
-                                                                                 :terrain [:sea]
-                                                                                 }
-                                                                                {:effect  [:research]
-                                                                                 :terrain [:land]
-                                                                                 }
-                                                                                {:effect  [:vp]
-                                                                                 :terrain [:sea :land]
-                                                                                 }
-                                                                                ]
-                                                                }
-                                                               {:vp            3
-                                                                :battle-spaces [
-                                                                                {:effect  [:bomb]
-                                                                                 :terrain [:land]
-                                                                                 }
-                                                                                {:effect  [:factory]
-                                                                                 :terrain [:land]
-                                                                                 }
-                                                                                {:terrain [:sea :land]
-                                                                                 }
-                                                                                ]
-                                                                }
-                                                               {:vp            5
-                                                                :battle-spaces [
-                                                                                {:effect  [:factory :research]
-                                                                                 :terrain [:sea :land]
-                                                                                 }
-                                                                                {:effect  [:strategy :strategy :strategy]
-                                                                                 :terrain [:sea :land]
-                                                                                 }
-                                                                                {:terrain [:sea :land]
-                                                                                 }
-                                                                                ]
-                                                                }
-                                                               ]
-                                               }
-                                              {:name          :eastern-europe
-                                               :pretty-name   "Eastern Europe"
-                                               :closed        false
-                                               :max-score     14
-                                               :min-score     -14
-                                               :current-score 0
-                                               :vp-locations  [-10 -5 5 10]
-                                               :campaigns     [
-                                                               {:vp            2
-                                                                :battle-spaces [
-                                                                                {:effect  [:tactical]
-                                                                                 :terrain [:land]
-                                                                                 }
-                                                                                {:effect  [:factory]
-                                                                                 :terrain [:land]
-                                                                                 }
-                                                                                ]
-                                                                }
-                                                               {:vp            3
-                                                                :battle-spaces [
-                                                                                {:effect  [:vp]
-                                                                                 :terrain [:land]
-                                                                                 }
-                                                                                {:effect  [:research :research]
-                                                                                 :terrain [:land]
-                                                                                 }
-                                                                                {:terrain [:sea :land]
-                                                                                 }
-                                                                                ]
-                                                                }
-                                                               {:vp            6
-                                                                :battle-spaces [
+(def base-game-starting-state {:axis-score    0
+                               :allies-score  0
+                               :axis-bag      starting-bag
+                               :allies-bag    starting-bag
+                               :research-pile research-pile
+                               :theaters      {:pacific-ocean
+                                               {:name          :pacific-ocean
+                                                :pretty-name   "Pacific Ocean"
+                                                :closed        false
+                                                :max-score     14
+                                                :min-score     -14
+                                                :current-score 0
+                                                :vp-locations  [-10 -5 5 10]
+                                                :campaigns     [
+                                                                {:vp            2
+                                                                 :battle-spaces [
+                                                                                 {:effect  [:bomb]
+                                                                                  :terrain [:sea]
+                                                                                  }
+                                                                                 {:effect  [:research]
+                                                                                  :terrain [:sea]
+                                                                                  }
+                                                                                 ]
+                                                                 }
+                                                                {:vp            3
+                                                                 :battle-spaces [
+                                                                                 {:effect  [:research :research]
+                                                                                  :terrain [:sea]
+                                                                                  }
+                                                                                 {:effect  [:factory]
+                                                                                  :terrain [:sea]
+                                                                                  }
+                                                                                 {:effect  [:strategy :strategy]
+                                                                                  :terrain [:sea]
+                                                                                  }
+                                                                                 {:terrain [:sea :land]}
+                                                                                 ]
+                                                                 }
+                                                                {:vp            5
+                                                                 :battle-spaces [
+                                                                                 {:effect  [:bomb]
+                                                                                  :terrain [:sea]
+                                                                                  }
+                                                                                 {:effect  [:vp :vp]
+                                                                                  :terrain [:sea :land]
+                                                                                  }
+                                                                                 {:terrain [:sea :land]
+                                                                                  }
+                                                                                 ]
+                                                                 }
+                                                                ]
+                                                }
+                                               :western-europe
+                                               {:name          :western-europe
+                                                :pretty-name   "Western Europe"
+                                                :closed        false
+                                                :max-score     14
+                                                :min-score     -14
+                                                :current-score 0
+                                                :vp-locations  [-10 -5 5 10]
+                                                :campaigns     [
+                                                                {:vp            2
+                                                                 :battle-spaces [
+                                                                                 {:effect  [:factory]
+                                                                                  :terrain [:sea]
+                                                                                  }
+                                                                                 {:effect  [:research]
+                                                                                  :terrain [:land]
+                                                                                  }
+                                                                                 {:effect  [:vp]
+                                                                                  :terrain [:sea :land]
+                                                                                  }
+                                                                                 ]
+                                                                 }
+                                                                {:vp            3
+                                                                 :battle-spaces [
+                                                                                 {:effect  [:bomb]
+                                                                                  :terrain [:land]
+                                                                                  }
+                                                                                 {:effect  [:factory]
+                                                                                  :terrain [:land]
+                                                                                  }
+                                                                                 {:terrain [:sea :land]
+                                                                                  }
+                                                                                 ]
+                                                                 }
+                                                                {:vp            5
+                                                                 :battle-spaces [
+                                                                                 {:effect  [:factory :research]
+                                                                                  :terrain [:sea :land]
+                                                                                  }
+                                                                                 {:effect  [:strategy :strategy :strategy]
+                                                                                  :terrain [:sea :land]
+                                                                                  }
+                                                                                 {:terrain [:sea :land]
+                                                                                  }
+                                                                                 ]
+                                                                 }
+                                                                ]
+                                                }
+                                               :eastern-europe
+                                               {:name          :eastern-europe
+                                                :pretty-name   "Eastern Europe"
+                                                :closed        false
+                                                :max-score     14
+                                                :min-score     -14
+                                                :current-score 0
+                                                :vp-locations  [-10 -5 5 10]
+                                                :campaigns     [
+                                                                {:vp            2
+                                                                 :battle-spaces [
+                                                                                 {:effect  [:tactical]
+                                                                                  :terrain [:land]
+                                                                                  }
+                                                                                 {:effect  [:factory]
+                                                                                  :terrain [:land]
+                                                                                  }
+                                                                                 ]
+                                                                 }
+                                                                {:vp            3
+                                                                 :battle-spaces [
+                                                                                 {:effect  [:vp]
+                                                                                  :terrain [:land]
+                                                                                  }
+                                                                                 {:effect  [:research :research]
+                                                                                  :terrain [:land]
+                                                                                  }
+                                                                                 {:terrain [:sea :land]
+                                                                                  }
+                                                                                 ]
+                                                                 }
+                                                                {:vp            6
+                                                                 :battle-spaces [
 
-                                                                                {:effect  [:bomb]
-                                                                                 :terrain [:land]
-                                                                                 }
-                                                                                {:effect  [:tactical :tactical]
-                                                                                 :terrain [:land]
-                                                                                 }
-                                                                                {:effect  [:strategy :strategy :strategy]
-                                                                                 :terrain [:land]
-                                                                                 }
-                                                                                {:effect  [:vp :vp]
-                                                                                 :terrain [:land]
-                                                                                 }
-                                                                                {:terrain [:land]
-                                                                                 }
-                                                                                ]
-                                                                }
-                                                               ]
-                                               }
-                                              {:name          :africa-and-middle-east
-                                               :pretty-name   "Africa and Middle East"
-                                               :closed        false
-                                               :max-score     11
-                                               :min-score     -11
-                                               :current-score 0
-                                               :vp-locations  [-8 -4 4 8]
-                                               :campaigns     [
-                                                               {:vp            3
+                                                                                 {:effect  [:bomb]
+                                                                                  :terrain [:land]
+                                                                                  }
+                                                                                 {:effect  [:tactical :tactical]
+                                                                                  :terrain [:land]
+                                                                                  }
+                                                                                 {:effect  [:strategy :strategy :strategy]
+                                                                                  :terrain [:land]
+                                                                                  }
+                                                                                 {:effect  [:vp :vp]
+                                                                                  :terrain [:land]
+                                                                                  }
+                                                                                 {:terrain [:land]
+                                                                                  }
+                                                                                 ]
+                                                                 }
+                                                                ]
+                                                }
+                                               :africa-and-middle-east
+                                               {:name          :africa-and-middle-east
+                                                :pretty-name   "Africa and Middle East"
+                                                :closed        false
+                                                :max-score     11
+                                                :min-score     -11
+                                                :current-score 0
+                                                :vp-locations  [-8 -4 4 8]
+                                                :campaigns     [
+                                                                {:vp            3
+                                                                 :battle-spaces [
+                                                                                 {:effect  [:strategy :strategy :strategy]
+                                                                                  :terrain [:land]
+                                                                                  }
+                                                                                 {:effect  [:tactical]
+                                                                                  :terrain [:sea]
+                                                                                  }
+                                                                                 {:effect  [:research]
+                                                                                  :terrain [:sea :land]
+                                                                                  }
+                                                                                 {:effect  [:vp]
+                                                                                  :terrain [:sea :land]
+                                                                                  }]
+
+                                                                 }
+                                                                {:vp            5
+                                                                 :battle-spaces [
+                                                                                 {:effect  [:tactical :tactical]
+                                                                                  :terrain [:land]
+                                                                                  }
+                                                                                 {:effect  [:factory :factory]
+                                                                                  :terrain [:sea]
+                                                                                  }
+                                                                                 {:terrain [:sea :land]
+                                                                                  }
+                                                                                 ]
+                                                                 }
+                                                                ]
+                                                }
+                                               :south-east-asia
+                                               {:name         :south-east-asia
+                                                :pretty-name  "South East Asia"
+                                                :closed       false
+                                                :max-score    11
+                                                :min-score    -11
+                                                :vp-locations [-8 -4 4 8]
+                                                :campaigns    [
+                                                               {:vp            2
                                                                 :battle-spaces [
-                                                                                {:effect  [:strategy :strategy :strategy]
-                                                                                 :terrain [:land]
-                                                                                 }
-                                                                                {:effect  [:tactical]
+                                                                                {:effect  [:vp :vp]
                                                                                  :terrain [:sea]
                                                                                  }
-                                                                                {:effect  [:research]
+                                                                                {:effect  [:vp]
                                                                                  :terrain [:sea :land]
                                                                                  }
-                                                                                {:effect  [:vp]
+                                                                                {:effect  [:strategy]
                                                                                  :terrain [:sea :land]
                                                                                  }]
-
                                                                 }
-                                                               {:vp            5
+                                                               {:vp            4
                                                                 :battle-spaces [
-                                                                                {:effect  [:tactical :tactical]
-                                                                                 :terrain [:land]
-                                                                                 }
-                                                                                {:effect  [:factory :factory]
+                                                                                {:effect  [:bomb]
                                                                                  :terrain [:sea]
+                                                                                 }
+                                                                                {:effect  [:vp :vp]
+                                                                                 :terrain [:land]
                                                                                  }
                                                                                 {:terrain [:sea :land]
                                                                                  }
                                                                                 ]
                                                                 }
                                                                ]
+                                                }
                                                }
-                                              {:name         :south-east-asia
-                                               :pretty-name  "South East Asia"
-                                               :closed       false
-                                               :max-score    11
-                                               :min-score    -11
-                                               :vp-locations [-8 -4 4 8]
-                                               :campaigns    [
-                                                              {:vp            2
-                                                               :battle-spaces [
-                                                                               {:effect  [:vp :vp]
-                                                                                :terrain [:sea]
-                                                                                }
-                                                                               {:effect  [:vp]
-                                                                                :terrain [:sea :land]
-                                                                                }
-                                                                               {:effect  [:strategy]
-                                                                                :terrain [:sea :land]
-                                                                                }]
-                                                               }
-                                                              {:vp            4
-                                                               :battle-spaces [
-                                                                               {:effect  [:bomb]
-                                                                                :terrain [:sea]
-                                                                                }
-                                                                               {:effect  [:vp :vp]
-                                                                                :terrain [:land]
-                                                                                }
-                                                                               {:terrain [:sea :land]
-                                                                                }
-                                                                               ]
-                                                               }
-                                                              ]
-                                               }
-                                              ]
                                }
   )
