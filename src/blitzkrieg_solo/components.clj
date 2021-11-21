@@ -83,11 +83,35 @@
                                  }
                    }
   )
+(def starting-bag [
+                   (:admiral unit-catalog)
+                   (:general unit-catalog)
+                   (:blitz-plane unit-catalog)
+                   (:one-plane unit-catalog)
+                   (:one-plane unit-catalog)
+                   (:one-plane unit-catalog)
+                   (:two-plane unit-catalog)
+                   (:two-plane unit-catalog)
+                   (:one-tank unit-catalog)
+                   (:one-tank unit-catalog)
+                   (:one-tank unit-catalog)
+                   (:two-tank unit-catalog)
+                   (:two-tank unit-catalog)
+                   (:three-tank unit-catalog)
+                   (:three-tank unit-catalog)
+                   (:one-ship unit-catalog)
+                   (:one-ship unit-catalog)
+                   (:one-ship unit-catalog)
+                   (:two-ship unit-catalog)
+                   (:two-ship unit-catalog)
+                   (:three-ship unit-catalog)
+                   (:three-ship unit-catalog)
+                   ]
+  )
 (def base-game-starting-state {:axis-score   0
                                :allies-score 0
-                               :axis-bag     [
-
-                                              ]
+                               :axis-bag     (into-array [] (starting-bag))
+                               :allies-bag   (into-array [] (starting-bag))
                                :theaters     [
                                               {:name          :pacific-ocean
                                                :pretty-name   "Pacific Ocean"
