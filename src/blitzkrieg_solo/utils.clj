@@ -1,7 +1,7 @@
 (ns blitzkrieg-solo.utils)
 
-(def validate-unit-battle-space-terrain-match [unit battle-space]
-  ())
+(defn unit-battle-space-terrain-match? [unit battle-space]
+  (not (empty? (clojure.set/intersection (:terrain unit) (:terrain battle-space)))))
 
 (defn calculate-effect [effect])
 

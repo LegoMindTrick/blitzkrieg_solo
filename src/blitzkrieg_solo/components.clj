@@ -148,11 +148,11 @@
                                                                  :battle-spaces {
                                                                                  :0
                                                                                  {:effect  [:bomb]
-                                                                                  :terrain [:sea]
+                                                                                  :terrain #{:sea}
                                                                                   }
                                                                                  :1
                                                                                  {:effect  [:research]
-                                                                                  :terrain [:sea]
+                                                                                  :terrain #{:sea}
                                                                                   }}
 
                                                                  }
@@ -160,18 +160,18 @@
                                                                 {:vp            3
                                                                  :battle-spaces {:0
                                                                                  {:effect  [:research :research]
-                                                                                  :terrain [:sea]
+                                                                                  :terrain #{:sea}
                                                                                   }
                                                                                  :1
                                                                                  {:effect  [:factory]
-                                                                                  :terrain [:sea]
+                                                                                  :terrain #{:sea}
                                                                                   }
                                                                                  :2
                                                                                  {:effect  [:strategy :strategy]
-                                                                                  :terrain [:sea]
+                                                                                  :terrain #{:sea}
                                                                                   }
                                                                                  :3
-                                                                                 {:terrain [:sea :land]}}
+                                                                                 {:terrain #{:sea :land}}}
 
                                                                  }
                                                                 :2
@@ -179,14 +179,14 @@
                                                                  :battle-spaces {
                                                                                  :0
                                                                                  {:effect  [:bomb]
-                                                                                  :terrain [:sea]
+                                                                                  :terrain #{:sea}
                                                                                   }
                                                                                  :1
                                                                                  {:effect  [:vp :vp]
-                                                                                  :terrain [:sea :land]
+                                                                                  :terrain #{:sea :land}
                                                                                   }
                                                                                  :2
-                                                                                 {:terrain [:sea :land]
+                                                                                 {:terrain #{:sea :land}
                                                                                   }}
 
                                                                  }}
@@ -204,15 +204,15 @@
                                                                  :battle-spaces {
                                                                                  :0
                                                                                  {:effect  [:factory]
-                                                                                  :terrain [:sea]
+                                                                                  :terrain #{:sea}
                                                                                   }
                                                                                  :1
                                                                                  {:effect  [:research]
-                                                                                  :terrain [:land]
+                                                                                  :terrain #{:land}
                                                                                   }
                                                                                  :2
                                                                                  {:effect  [:vp]
-                                                                                  :terrain [:sea :land]
+                                                                                  :terrain #{:sea :land}
                                                                                   }}
 
                                                                  }
@@ -221,14 +221,14 @@
                                                                  :battle-spaces {
                                                                                  :0
                                                                                  {:effect  [:bomb]
-                                                                                  :terrain [:land]
+                                                                                  :terrain #{:land}
                                                                                   }
                                                                                  :1
                                                                                  {:effect  [:factory]
-                                                                                  :terrain [:land]
+                                                                                  :terrain #{:land}
                                                                                   }
                                                                                  :2
-                                                                                 {:terrain [:sea :land]
+                                                                                 {:terrain #{:sea :land}
                                                                                   }}
                                                                  }
                                                                 :2
@@ -236,14 +236,14 @@
                                                                  :battle-spaces {
                                                                                  :0
                                                                                  {:effect  [:factory :research]
-                                                                                  :terrain [:sea :land]
+                                                                                  :terrain #{:sea :land}
                                                                                   }
                                                                                  :1
                                                                                  {:effect  [:strategy :strategy :strategy]
-                                                                                  :terrain [:sea :land]
+                                                                                  :terrain #{:sea :land}
                                                                                   }
                                                                                  :2
-                                                                                 {:terrain [:sea :land]
+                                                                                 {:terrain #{:sea :land}
                                                                                   }}
 
                                                                  }}
@@ -263,11 +263,11 @@
                                                                  :battle-spaces {
                                                                                  :0
                                                                                  {:effect  [:tactical]
-                                                                                  :terrain [:land]
+                                                                                  :terrain #{:land}
                                                                                   }
                                                                                  :1
                                                                                  {:effect  [:factory]
-                                                                                  :terrain [:land]
+                                                                                  :terrain #{:land}
                                                                                   }}
 
                                                                  }
@@ -276,14 +276,14 @@
                                                                  :battle-spaces {
                                                                                  :0
                                                                                  {:effect  [:vp]
-                                                                                  :terrain [:land]
+                                                                                  :terrain #{:land}
                                                                                   }
                                                                                  :1
                                                                                  {:effect  [:research :research]
-                                                                                  :terrain [:land]
+                                                                                  :terrain #{:land}
                                                                                   }
                                                                                  :2
-                                                                                 {:terrain [:sea :land]
+                                                                                 {:terrain #{:sea :land}
                                                                                   }}
 
                                                                  }
@@ -292,22 +292,22 @@
                                                                  :battle-spaces {
                                                                                  :0
                                                                                  {:effect  [:bomb]
-                                                                                  :terrain [:land]
+                                                                                  :terrain #{:land}
                                                                                   }
                                                                                  :1
                                                                                  {:effect  [:tactical :tactical]
-                                                                                  :terrain [:land]
+                                                                                  :terrain #{:land}
                                                                                   }
                                                                                  :2
                                                                                  {:effect  [:strategy :strategy :strategy]
-                                                                                  :terrain [:land]
+                                                                                  :terrain #{:land}
                                                                                   }
                                                                                  :3
                                                                                  {:effect  [:vp :vp]
-                                                                                  :terrain [:land]
+                                                                                  :terrain #{:land}
                                                                                   }
                                                                                  :4
-                                                                                 {:terrain [:land]
+                                                                                 {:terrain #{:land}
                                                                                   }}
                                                                  }
                                                                 }
@@ -325,19 +325,19 @@
                                                                                  :battle-spaces {
                                                                                                  :0
                                                                                                  {:effect  [:strategy :strategy :strategy]
-                                                                                                  :terrain [:land]
+                                                                                                  :terrain #{:land}
                                                                                                   }
                                                                                                  :1
                                                                                                  {:effect  [:tactical]
-                                                                                                  :terrain [:sea]
+                                                                                                  :terrain #{:sea}
                                                                                                   }
                                                                                                  :2
                                                                                                  {:effect  [:research]
-                                                                                                  :terrain [:sea :land]
+                                                                                                  :terrain #{:sea :land}
                                                                                                   }
                                                                                                  :3
                                                                                                  {:effect  [:vp]
-                                                                                                  :terrain [:sea :land]
+                                                                                                  :terrain #{:sea :land}
                                                                                                   }}
                                                                                  }
                                                                                 :1
@@ -345,14 +345,14 @@
                                                                                  :battle-spaces {
                                                                                                  :0
                                                                                                  {:effect  [:tactical :tactical]
-                                                                                                  :terrain [:land]
+                                                                                                  :terrain #{:land}
                                                                                                   }
                                                                                                  :1
                                                                                                  {:effect  [:factory :factory]
-                                                                                                  :terrain [:sea]
+                                                                                                  :terrain #{:sea}
                                                                                                   }
                                                                                                  :2
-                                                                                                 {:terrain [:sea :land]
+                                                                                                 {:terrain #{:sea :land}
                                                                                                   }}
 
                                                                                  }}
@@ -372,15 +372,15 @@
                                                                 :battle-spaces {
                                                                                 :0
                                                                                 {:effect  [:vp :vp]
-                                                                                 :terrain [:sea]
+                                                                                 :terrain #{:sea}
                                                                                  }
                                                                                 :1
                                                                                 {:effect  [:vp]
-                                                                                 :terrain [:sea :land]
+                                                                                 :terrain #{:sea :land}
                                                                                  }
                                                                                 :2
                                                                                 {:effect  [:strategy]
-                                                                                 :terrain [:sea :land]
+                                                                                 :terrain #{:sea :land}
                                                                                  }}
                                                                 }
                                                                :1
@@ -388,14 +388,14 @@
                                                                 :battle-spaces {
                                                                                 :0
                                                                                 {:effect  [:bomb]
-                                                                                 :terrain [:sea]
+                                                                                 :terrain #{:sea}
                                                                                  }
                                                                                 :1
                                                                                 {:effect  [:vp :vp]
-                                                                                 :terrain [:land]
+                                                                                 :terrain #{:land}
                                                                                  }
                                                                                 :2
-                                                                                {:terrain [:sea :land]
+                                                                                {:terrain #{:sea :land}
                                                                                  }}
 
                                                                 }}
