@@ -2,83 +2,83 @@
 
 (def unit-catalog {
                    :one-ship    {:value   1
-                                 :terrain [:sea]
+                                 :terrain #{:sea}
                                  }
                    :two-ship    {:value   2
-                                 :terrain [:sea]
+                                 :terrain #{:sea}
                                  }
                    :three-ship  {:value   3
-                                 :terrain [:sea]
+                                 :terrain #{:sea}
                                  }
                    :one-tank    {:value   1
-                                 :terrain [:land]
+                                 :terrain #{:land}
                                  }
                    :two-tank    {:value   2
-                                 :terrain [:land]
+                                 :terrain #{:land}
                                  }
                    :three-tank  {:value   3
-                                 :terrain [:land]
+                                 :terrain #{:land}
                                  }
                    :blitz-plane {:value   0
-                                 :terrain [:sea :land]
+                                 :terrain #{:sea :land}
                                  :effect  [:blitz]
                                  }
                    :one-plane   {:value   1
-                                 :terrain [:sea :land]
+                                 :terrain #{:sea :land}
                                  }
                    :two-plane   {:value   2
-                                 :terrain [:sea :land]
+                                 :terrain #{:sea :land}
                                  }
-                   :admiral     {:terrain [:sea]
+                   :admiral     {:terrain #{:sea}
                                  :effect  [:admiral]
                                  }
-                   :general     {:terrain [:land]
+                   :general     {:terrain #{:land}
                                  :effect  [:general]
                                  }
                    :blitz-ship  {:value   1
-                                 :terrain [:sea]
+                                 :terrain #{:sea}
                                  :effect  [:blitz]
                                  }
                    :bomb-ship   {:value   1
-                                 :terrain [:sea]
+                                 :terrain #{:sea}
                                  :effect  [:bomb]
                                  }
                    :four-ship   {:value   4
-                                 :terrain [:sea]
+                                 :terrain #{:sea}
                                  }
                    :task-ship   {:value   5
-                                 :terrain [:sea]
+                                 :terrain #{:sea}
                                  :effect  [:task]
                                  }
                    :blitz-tank  {:value   1
-                                 :terrain [:land]
+                                 :terrain #{:land}
                                  :effect  [:blitz]
                                  }
                    :four-tank   {:value   4
-                                 :terrain [:land]
+                                 :terrain #{:land}
                                  }
                    :task-tank   {:value   5
-                                 :terrain [:land]
+                                 :terrain #{:land}
                                  :effect  [:task]
                                  }
                    :bomb-plane  {:value   1
-                                 :terrain [:land :sea]
+                                 :terrain #{:land :sea}
                                  :effect  [:bomb]
                                  }
                    :three-plane {:value   3
-                                 :terrain [:sea :land]
+                                 :terrain #{:sea :land}
                                  }
                    :task-plane  {:value   4
-                                 :terrain [:sea :land]
+                                 :terrain #{:sea :land}
                                  :effect  [:task]
                                  }
-                   :scientist   {:terrain [:land]
+                   :scientist   {:terrain #{:land}
                                  :effect  [:scientist]
                                  }
-                   :spy         {:terrain [:land]
+                   :spy         {:terrain #{:land}
                                  :effect  [:spy]
                                  }
-                   :nuke        {:terrain [:land]
+                   :nuke        {:terrain #{:land}
                                  :effect  [:nuke]
                                  }
                    }

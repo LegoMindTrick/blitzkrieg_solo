@@ -1,5 +1,8 @@
 (ns blitzkrieg-solo.utils)
 
+(def validate-unit-battle-space-terrain-match [unit battle-space]
+  ())
+
 (defn calculate-effect [effect])
 
 (defn place-unit-in-campaign [game-state theater-key campaign-pos battle-space-pos unit]
@@ -28,3 +31,4 @@
 
 (defn make-player-move [game-state combatant unit theater campaign position]
   )
+
