@@ -5,6 +5,21 @@
 
 (defn calculate-effect [effect])
 
+(defn draw-random-unit-to-hand [game-state combatant]
+  (let [bag-key (if (= combatant :axis) :axis-bag
+                                        :allies-bag)
+        bag (bag-key game-state)
+        idx (rand-int (count bag))
+        unit (get bag idx)
+        updated-bag (filter #(not (= unit %)))
+        hand-key (if (= combatant :axis) :axis-hand
+                                         :allies-hand)
+        hand (hand-key game-state)
+        updated-hand (conj hand unit)
+        updated-game-state (assoc game-state bag-key updated-bag
+                                             hand-key updated-hand)]
+    updated-game-state))
+
 (defn place-unit-in-campaign [game-state theater-key campaign-pos battle-space-pos unit]
   (let [theaters (:theaters game-state)
         theater (theater-key theaters)
