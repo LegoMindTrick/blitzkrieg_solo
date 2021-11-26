@@ -1,4 +1,5 @@
-(ns blitzkrieg-solo.components)
+(ns blitzkrieg-solo.components
+  (:require [blitzkrieg-solo.utils :refer :all]))
 
 (def unit-catalog {
                    :one-ship    {:value   1
@@ -132,8 +133,8 @@
 
 (def base-game-starting-state {:axis-score    0
                                :allies-score  0
-                               :axis-bag      starting-bag
-                               :allies-bag    starting-bag
+                               :axis-bag      (add-bag-ids starting-bag :axis)
+                               :allies-bag    (add-bag-ids starting-bag :allies)
                                :research-pile research-pile
                                :theaters      {:pacific-ocean
                                                {:name          :pacific-ocean

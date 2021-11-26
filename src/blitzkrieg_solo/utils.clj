@@ -32,3 +32,10 @@
 (defn make-player-move [game-state combatant unit theater campaign position]
   )
 
+(defn add-bag-ids [bag combatant]
+  (let [bag-label (if (= :axis combatant) "axis-bag" "allies-bag")]
+    (map-indexed (fn [idx itm]
+           (assoc itm :bag-id
+             (keyword (str bag-label "-" idx))))
+         bag)))
+
