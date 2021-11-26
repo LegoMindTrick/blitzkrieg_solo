@@ -10,8 +10,8 @@
                                         :allies-bag)
         bag (bag-key game-state)
         idx (rand-int (count bag))
-        unit (get bag idx)
-        updated-bag (filter #(not (= unit %)))
+        unit (nth bag idx)
+        updated-bag (filter #(not (= unit %)) bag)
         hand-key (if (= combatant :axis) :axis-hand
                                          :allies-hand)
         hand (hand-key game-state)
