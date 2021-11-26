@@ -135,6 +135,8 @@
                                :allies-score  0
                                :axis-bag      (add-bag-ids starting-bag :axis)
                                :allies-bag    (add-bag-ids starting-bag :allies)
+                               :axis-hand     {}
+                               :allies-hand   {}
                                :research-pile research-pile
                                :theaters      {:pacific-ocean
                                                {:name          :pacific-ocean
