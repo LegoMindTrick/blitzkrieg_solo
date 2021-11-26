@@ -47,6 +47,11 @@
 (defn make-player-move [game-state combatant unit theater campaign position]
   )
 
+(defn get-user-input [msg]
+  (println msg)
+  (read-line)
+  )
+
 (defn add-bag-ids [bag combatant]
   (let [bag-label (if (= :axis combatant) "axis-bag" "allies-bag")]
     (map-indexed (fn [idx itm]
