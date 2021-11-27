@@ -1,5 +1,4 @@
-(ns blitzkrieg-solo.components
-  (:require [blitzkrieg-solo.utils :refer :all]))
+(ns blitzkrieg-solo.components)
 
 (def unit-catalog {
                    :one-ship    {:value   1
